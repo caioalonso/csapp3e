@@ -1,0 +1,23 @@
+char -> int
+movsbl (%rdi), %eax
+movl %eax, (%rsi)
+             
+char -> unsigned
+movbl (%rdi), %eax
+movl %eax, (%rsi)
+
+unsigned char -> long
+movzbl (%rdi), %eax
+movq %rax, (%rsi)
+
+int -> char
+movl (%rsi), %eax
+movb %al, (%rsi)
+
+unsigned -> unsigned char
+movl (%rdi), %eax
+movb %al, (%rsi)
+
+char -> short
+movsbw (%rdi), %ax
+movw %ax, (%rsi)
